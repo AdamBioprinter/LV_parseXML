@@ -116,7 +116,7 @@ def parseXML(myFile):
   # --------------------------------------------------------------------
   # save .mat file
   PID = PID.replace("\"","")
-  sio.savemat(os.path.basename(myFile)+'.mat', \
+  sio.savemat(os.path.basename(myFile).replace('.xml','.mat'), \
       {'EndoX':EndXMat, 'EndoY':EndYMat, 'RWaves':Rwaves, 'TProg':TP, 'FrT':FrT, \
       'EDA':float(EDA), 'EDA_Unit':str(EDAUnit), 'Pix_Unit':PixUnits, 'PixDim':float(PixDim), \
       'EsT':EsT, 'EsFr':int(EsFr), 'EdFr':int(EdFr), 'EdT':EdT, \
